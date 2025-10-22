@@ -26,7 +26,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4>Address</h4>
-                <p>123 Green Street, Eco City, EC 12345</p>
+                <p>8390 Suite C Terminal Road, Lorton VA 22079</p>
               </div>
             </div>
             <div className="contact-info-item">
@@ -35,7 +35,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4>Phone</h4>
-                <p>(555) 123-4567</p>
+                <p>(571) 632-6843</p>
               </div>
             </div>
             <div className="contact-info-item">
