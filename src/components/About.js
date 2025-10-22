@@ -6,9 +6,9 @@ const About = () => {
           <div className="about-content">
             <div className="about-text">
               <h3>From Humble Beginnings to Industry Leaders</h3>
-              <p>Founded in 2025, KanaBags LLC started as a small family-owned operation with a simple mission: to provide businesses with sustainable packaging solutions that don't compromise on quality.</p>
-              <p>Our founder, John Kana, recognized the growing need for eco-friendly alternatives to plastic bags and set out to create products that would help businesses reduce their environmental footprint.</p>
-              <p>Today, we've grown into a leading manufacturer of paper bags, serving clients across multiple industries. And we're excited to announce our expansion into paper cup production, offering the same commitment to quality and sustainability.</p>
+              <p>Founded in 2025, KanaBags LLC is a growing, family-owned manufacturing company dedicated to producing high-quality, eco-friendly packaging products. Established with the goal of entering the market as a reliable provider of sustainable alternatives to plastic, KanaBags strives to combine environmental responsibility with superior product performance.</p>
+              <p>Our mission is to support businesses in reducing their ecological footprint by offering durable, affordable, and sustainable packaging solutions. We began with the production of paper bags and are now expanding into paper cup manufacturing, driven by the increasing demand for environmentally conscious products.</p>
+              <p>As a young and ambitious company, KanaBags LLC continues to invest in innovation, quality control, and community partnerships to strengthen our presence in the market and contribute to a greener future.</p>
               <a href="#contact" className="btn">Get in Touch</a>
             </div>
             <div className="about-image">
