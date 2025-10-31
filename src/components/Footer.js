@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-column">
             <h3>KanaBags LLC</h3>
-            <p>Providing eco-friendly paper packaging solutions since 2010. Committed to quality, sustainability, and customer satisfaction.</p>
+            <p>Building on a foundation laid in 2010, Kanabags is the new, forward-thinking packaging division of Kana PLC, established in 2025. We are dedicated to advancing eco-friendly paper solutions with an unwavering commitment to quality, sustainability, and customer satisfaction.</p>
             <div className="social-links">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
@@ -34,10 +34,10 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Products</h3>
             <ul className="footer-links">
-              <li><a href="#">Retail Bags</a></li>
-              <li><a href="#">Grocery Bags</a></li>
-              <li><a href="#">Custom Printing</a></li>
-              <li><a href="#">Paper Cups (Coming Soon)</a></li>
+              <li><a href="#products">Retail Bags (Coming Soon)</a></li>
+              <li><a href="#products">Grocery Bags</a></li>
+              <li><a href="#products">Custom Printing</a></li>
+              <li><a href="#products">Paper Cups </a></li>
             </ul>
           </div>
           <div className="footer-column">
