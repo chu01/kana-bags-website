@@ -105,7 +105,7 @@ header {
     z-index: 1000;
 }
 
-.header-container {
+/* .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,6 +117,19 @@ header {
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
+} */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Adjust padding for logo size */
+}
+
+.logo img {
+    display: block;
+    max-height: 6rem; /* Limits the logo height so it doesn't break the header */
+    width: auto;
 }
 
 .logo span {

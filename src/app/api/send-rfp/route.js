@@ -10,16 +10,19 @@ export async function POST(request) {
 
     const data = await resend.emails.send({
       from: 'Kanabags Web <info@kanabagsllc.com>', // Update to info@kanabagsllc.com once verified
-      to: ['abiyu.tegegn@gmail.com'], // Where you want to receive the leads
+      to: ['kanabags001@gmail.com', 'abiyu.tegegn@gmail.com'], // Where you want to receive the leads
       subject: `🚨 NEW ENTERPRISE RFP: ${company}`,
       html: `
-        <h2>New Procurement Inquiry from Kanabags Website</h2>
-        <p><strong>Company:</strong> ${company}</p>
-        <p><strong>Corporate Email:</strong> ${email}</p>
-        <p><strong>Monthly Volume:</strong> ${volume}</p>
-        <p><strong>Lead Time:</strong> ${leadTime}</p>
-        <p><strong>Specifications:</strong> ${specs}</p>
-      `,
+        <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
+            <h2 style="color: #2e7d32;">New Website Inquiry</h2>
+            <p><strong>From:</strong> ${leadTime} (${email})</p> 
+            <p><strong>Subject/Company:</strong> ${company}</p>
+            <p><strong>Type:</strong> ${volume}</p>
+            <hr />
+            <p><strong>Message:</strong></p>
+            <p style="white-space: pre-wrap;">${specs}</p>
+        </div>
+        `,
     });
 
     return NextResponse.json(data);

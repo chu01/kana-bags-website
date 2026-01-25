@@ -22,9 +22,9 @@ const Hero = () => {
         
         {/* Visual proof: You can put a high-res image of your machines or products here */}
         <div className="lg:w-1/2 mt-12 lg:mt-0">
-          <div className="rounded-xl overflow-hidden shadow-2xl bg-white p-2">
-             <img src="/factory-production.jpg" alt="Kanabags Manufacturing" className="rounded-lg" />
-          </div>
+          {/* <div className="rounded-xl overflow-hidden shadow-2xl bg-white p-2">
+             <img src="/kanabags-logo-1.png" alt="Kanabags Manufacturing" className="rounded-lg" />
+          </div> */}
         </div>
       </div>
     </section>
