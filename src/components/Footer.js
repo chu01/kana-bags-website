@@ -13,14 +13,18 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-column">
             <h3>KanaBags LLC</h3>
-            <p>Building on a foundation laid in 2010, Kanabags is the new, forward-thinking packaging division of Kana PLC, established in 2025. We are dedicated to advancing eco-friendly paper solutions with an unwavering commitment to quality, sustainability, and customer satisfaction.</p>
-            <div className="social-links">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            </div>
+            <p>
+              Based in <strong>Lorton, Virginia</strong>, Kanabags is the forward-thinking packaging division of Kana PLC. 
+              Established in 2025, we specialize in high-volume, eco-friendly paper solutions for the North American supply chain.
+            </p>
+            {/* <div className="social-links">
+              <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="X (Twitter)"><i className="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+            </div> */}
           </div>
+
           <div className="footer-column">
             <h3>Quick Links</h3>
             <ul className="footer-links">
@@ -28,31 +32,34 @@ const Footer = () => {
               <li><a href="#about">About Us</a></li>
               <li><a href="#products">Products</a></li>
               <li><a href="#environment">Environment</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#procurement-form">Procurement Portal</a></li>
             </ul>
           </div>
+
           <div className="footer-column">
-            <h3>Products</h3>
-            <ul className="footer-links">
-              <li><a href="#products">Retail Bags (Coming Soon)</a></li>
-              <li><a href="#products">Grocery Bags</a></li>
-              <li><a href="#products">Custom Printing</a></li>
-              <li><a href="#products">Paper Cups </a></li>
-            </ul>
+            <h3>Facility Location</h3>
+            <p style={{ fontSize: '14px', lineHeight: '1.8' }}>
+              8390 Suite C Terminal Road<br />
+              Lorton, VA 22079<br />
+              <strong>Phone:</strong> (571) 632-6843<br />
+              <strong>Email:</strong> kanabags001@gmail.com OR info@kanabagsllc.com
+            </p>
           </div>
-          <div className="footer-column">
+
+          {/* <div className="footer-column">
             <h3>Newsletter</h3>
-            <p>Subscribe to our newsletter for updates on new products and sustainability initiatives.</p>
+            <p>Get technical updates on our manufacturing capacity and new sustainable product lines.</p>
             <form onSubmit={handleNewsletterSubmit}>
               <div className="form-group">
-                <input type="email" placeholder="Your email address" required />
+                <input type="email" placeholder="Corporate email" required />
               </div>
               <button type="submit" className="btn">Subscribe</button>
             </form>
-          </div>
+          </div> */}
         </div>
+        
         <div className="copyright">
-          <p>&copy; 2025 KanaBags LLC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} KanaBags LLC. Manufactured in the USA. All rights reserved.</p>
         </div>
       </div>
     </footer>
