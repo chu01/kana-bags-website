@@ -1,27 +1,30 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image' // 1. Import the Next.js Image component
+import Image from 'next/image'
+import Link from 'next/link' 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Helper to close menu on mobile clicks
+  const handleNavClick = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <header>
       <div className="container header-container">
-        {/* 2. Wrap the logo image in your link */}
-        <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center' }}>
+        {/* Changed to Link and pointed to root "/" */}
+        <Link href="/" className="logo" style={{ display: 'flex', alignItems: 'center' }}>
           <Image 
-            src="/kanabags-logo.png"          // 3. Make sure your file is named logo.png in the /public folder
+            src="/kanabags-logo.png"
             alt="Kanabags LLC Logo" 
-            width={180}              // 4. Adjust width to fit your design
-            height={100}              // 5. Adjust height to maintain aspect ratio
-            priority                 // 6. This tells Next.js to load the logo immediately
+            width={180}
+            height={100}
+            priority
             style={{ objectFit: 'contain' }}
           />
-          {/* Optional: If you still want the text logo next to the image, keep this line. 
-              If the image HAS the text, delete the line below. */}
-          {/* <span style={{ marginLeft: '10px' }}>Kana<span>Bags</span> LLC</span> */}
-        </a>
+        </Link>
 
         <button 
           className="mobile-menu-btn"
@@ -31,11 +34,14 @@ const Header = () => {
         </button>
 
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-          <li><a href="#products" onClick={() => setIsMenuOpen(false)}>Products</a></li>
-          <li><a href="#environment" onClick={() => setIsMenuOpen(false)}>Environment</a></li>
-          <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+          {/* Using /#ID format ensures these work from internal product pages */}
+          <li><Link href="/#home" onClick={handleNavClick}>Home</Link></li>
+          <li><Link href="/#about" onClick={handleNavClick}>About</Link></li>
+          <li><Link href="/#products" onClick={handleNavClick}>Products</Link></li>
+          <li><Link href="/#environment" onClick={handleNavClick}>Environment</Link></li>
+          <li><Link href="/#contact" onClick={handleNavClick}>Contact</Link></li>
+          {/* Added a highlighted CTA for Procurement - helps catch Starbucks' attention */}
+          <li><Link href="/#procurement-form" onClick={handleNavClick} className="btn-nav">Get Quote</Link></li>
         </ul>
       </div>
     </header>

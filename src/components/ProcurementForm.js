@@ -2,7 +2,7 @@
 import { useState } from 'react';
 
 const ProcurementForm = () => {
-  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,10 +14,13 @@ const ProcurementForm = () => {
       volume: e.target.volume.value,
       leadTime: e.target.leadTime.value,
       specs: e.target.specs.value,
+      // Capturing the sample request value
+      requestSample: e.target.requestSample.checked ? "YES - Free Sample Kit Requested" : "No",
     };
 
     const response = await fetch('/api/send-rfp', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
 
@@ -65,13 +68,36 @@ const ProcurementForm = () => {
                 <label>Desired Lead Time</label>
                 <input name="leadTime" type="text" placeholder="e.g. 45 Days" />
               </div>
-              <div className="form-group full-width">
-                <label>Technical Specifications</label>
-                <textarea name="specs" rows="4" placeholder="Detail sizing, GSM, and custom branding needs..."></textarea>
+
+              {/* NEW: Free Sample Request Toggle */}
+              <div className="form-group full-width" style={{ 
+                background: '#f0fdf4', 
+                padding: '15px', 
+                borderRadius: '8px', 
+                border: '1px solid #bbf7d0',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px'
+              }}>
+                <input 
+                  type="checkbox" 
+                  name="requestSample" 
+                  id="requestSample" 
+                  style={{ width: '20px', height: '20px', cursor: 'pointer' }} 
+                />
+                <label htmlFor="requestSample" style={{ margin: 0, cursor: 'pointer', color: '#166534', fontWeight: 'bold' }}>
+                  Send me a Free Sample Kit (Cups & Bags) to my corporate address
+                </label>
               </div>
+
+              <div className="form-group full-width">
+                <label>Technical Specifications / Shipping Address for Samples</label>
+                <textarea name="specs" rows="4" placeholder="If requesting samples, please provide your shipping address here..."></textarea>
+              </div>
+
               <div className="full-width">
                 <button type="submit" className="btn btn-enterprise" disabled={status === 'loading'}>
-                  {status === 'loading' ? 'Sending...' : 'Submit Technical RFP'}
+                  {status === 'loading' ? 'Processing...' : 'Submit Technical RFP'}
                 </button>
                 {status === 'error' && <p style={{color: 'red', marginTop: '10px'}}>Error sending. Please try again.</p>}
               </div>
