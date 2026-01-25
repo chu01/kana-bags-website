@@ -7,6 +7,7 @@ import Environmental from '@/components/Environmental'
 import Values from '@/components/Values'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import ProcurementForm from '@/components/ProcurementForm'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <About />
       <Products />
+      <ProcurementForm />
       <Environmental />
       <Values />
       <Contact />

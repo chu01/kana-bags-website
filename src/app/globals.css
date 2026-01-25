@@ -455,3 +455,141 @@ footer {
         font-size: 1.8rem;
     }
 }
+
+/* --- Procurement & Enterprise Section --- */
+
+.procurement {
+    background-color: #f0f4f1; /* Light professional sage-grey */
+    border-top: 1px solid #e0e0e0;
+}
+
+.procurement-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.procurement-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.procurement-header h2 {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.procurement-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Form Grid for Next.js Component */
+.procurement-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.procurement-form-grid label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.procurement-form-grid input,
+.procurement-form-grid select,
+.procurement-form-grid textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.procurement-form-grid input:focus,
+.procurement-form-grid select:focus,
+.procurement-form-grid textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.btn-enterprise {
+    width: 100%;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 18px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.btn-enterprise:hover {
+    background-color: #0d3b0f;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sustainability Fact Sheet Table */
+.fact-sheet-container {
+    margin-top: 60px;
+    overflow-x: auto;
+}
+
+.fact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fact-table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.fact-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: var(--text-dark);
+}
+
+.fact-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive adjustments for the form */
+@media (max-width: 768px) {
+    .procurement-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+    .procurement-container {
+        padding: 30px 20px;
+    }
+}
