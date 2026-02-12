@@ -17,7 +17,7 @@ const About = () => {
             </div>
             <div className="about-image">
               <Image 
-                src="/images/global/about/office-building.jpg" 
+                src="/images/global/about/Machien-kana.png" 
                 alt="Factory" 
                 width={600} 
                 height={400}
