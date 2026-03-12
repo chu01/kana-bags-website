@@ -17,7 +17,7 @@ export async function POST(request) {
 
     const data = await resend.emails.send({
       from: 'Kanabags Web <info@kanabagsllc.com>', 
-      to: ['kanabags001@gmail.com', 'abiyu.tegegn@gmail.com'], 
+      to: ['kanabags001@gmail.com','operations@kanabagsllc.net', 'abiyu.tegegn@gmail.com'], 
       subject: `${requestSample === "YES - Free Sample Kit Requested" ? '📦 SAMPLE REQ: ' : '🚨 RFP: '}${company}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">

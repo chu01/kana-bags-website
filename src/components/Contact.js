@@ -61,7 +61,7 @@ const Contact = () => {
               <div>
                 <h4>Email</h4>
                 {/* TIP: Once your domain is ready, update this to info@kanabagsllc.com */}
-                <p>kanabags001@gmail.com</p> 
+                <p>operations@kanabagsllc.net</p> 
               </div>
             </div>
           </div>
