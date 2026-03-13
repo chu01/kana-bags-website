@@ -41,8 +41,9 @@ const Footer = () => {
             <p style={{ fontSize: '14px', lineHeight: '1.8' }}>
               8390 Suite C Terminal Road<br />
               Lorton, VA 22079<br />
-              <strong>Phone:</strong> (571) 632-6843<br />
-              <strong>Email:</strong> kanabags001@gmail.com OR info@kanabagsllc.com
+              <strong>Phone:</strong> (571) 632-6843 <br />
+              <strong>Phone:</strong> (202) 336-3453<br />
+              <strong>Email:</strong> operations@kanabagsllc.net OR info@kanabagsllc.net
             </p>
           </div>
 
